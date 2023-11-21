@@ -1,0 +1,32 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+
+    <div id="formulario" class="login">     {% csrf_token %}
+        <form action="#" method="get">
+            <h2>Cadastro</h2>
+            <label for="name">
+                <input type="text" name="name" id="name" placeholder="Nome" class="input">
+            </label>
+            <label for="sobrenome">
+                <input type="text" name="sobrenome id="sobrenome" placeholder="Sobrenome" class="input">
+            </label>
+            <label for="cpf">
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" class="input">
+            </label>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="E-mail" class="input">
+            </label>
+            <label for="password">
+                <input type="password" name="password" id="passOne" placeholder="Senha" class="input">
+            </label>
+            <label for="password">
+                <input type="password" name="password" id="passTwo" placeholder="Repita a Senha" class="input">
+            </label>
+
+            <span class="valido"></span>
+            <input type="button" value="Cadastrar" class="btn" name="Cadastre-se">
+            <button class="btn"><a href="{% url 'cadastro:login' %}" class="btna">Entrar</a></button>
+        </form>
+    </div>
+{% endblock content %}

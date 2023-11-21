@@ -1,0 +1,18 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+    <div id="formulario" class="login">
+        <form action="#" method="get">
+            <h2>Login</h2>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="E-mail" class="input">
+            </label>
+            <label for="password">
+                <input type="password" name="password" id="pass" placeholder="Senha" class="input">
+            </label>
+            <input type="button" value="Entrar" class="btn">
+            <p class="link"><a href="#">Esqueceu sua Senha?</a></p>
+            <button class="btn"><a href="{% url 'cadastro:signup' %}" class="btna">Cadastre-se</a></button>
+        </form>
+    </div>
+{% endblock content %}
