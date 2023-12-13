@@ -10,7 +10,7 @@ def index(request):
     if request.user.is_authenticated:
         return render(request, 'cadastro/index.html')
     
-    return HttpResponse('Voce precisa fazer login')
+    return render(request, 'cadastro/login.html')
 
 def login(request):
     if request.method == "GET":
